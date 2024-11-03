@@ -1,0 +1,9 @@
+version: '3'
+services:
+  expense_tracker:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      # Mounts the current directory's HTML files to the container's nginx directory
+      - ./html:/usr/share/nginx/html
